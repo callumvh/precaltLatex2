@@ -1,94 +1,54 @@
-\documentclass[12pt, a4paper]{article}
+\documentclass[12pt]{article}
+\usepackage{enumitem}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{amsfonts}
+\usepackage[normalem]{ulem} % [normalem] prevents the package from changing the default behavior of `\emph` to dashuline.
 
-\include{inc/packages.inc}
-\include{inc/personalize.inc}
-\include{inc/style.inc}
 
+\renewcommand{\familydefault}{\sfdefault}
 
-% \pagestyle{plain}
-\pagestyle{fancy}
-\fancyhf{}
-\fancyhfoffset[L]{1cm} % left extra length
-\fancyhfoffset[R]{1cm} % right extra length
-\rhead{\thepage}
-\lhead{\nouppercase\leftmark}
-\cfoot{\fancyplain{}{\thepage} }
+\usepackage{xcolor}
+\pagecolor[rgb]{0.15625,0.15625,0.15625} %black
+
+\color[rgb]{0.69921875,0.69921875,0.69921875} %grey
 
 \begin{document}
-\nocite{*}
 
-\pagenumbering{gobble}
-\include{inc/title.inc}
+\section*{Precalc notes}
 
-\tableofcontents
-\newpage
-\newcounter{lastroman}
-\setcounter{lastroman}{\value{page}}
-\pagenumbering{arabic}
-\maketitle
-\begin{abstract}
-    \lipsum[20]
-\end{abstract}
-\section{Topic1, Content1 and Structure1}
-\subsection{Topic}
-\lipsum[10]
-\subsection{Content}
-\lipsum[15]
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.65\textwidth]{Andromeda_Galaxy_560mm_FL.jpg}\label{fig::andromeda}
-    \caption{Andromeda Galaxy}
-\end{figure}
-\subsection{Structure}
-\lipsum[20]
-\section{Topic2, Content2 and Structure2}
-\subsection{Topic}
-\lipsum[25]
-\subsection{Content}
-\begin{table}[H]
-\centering
-\begin{tabular}{@{}llllllll@{}} \toprule
-    {\(m\)} & {\(\Re\{\underline{\mathfrak{X}}(m)\}\)} & {\(-\Im\{\underline{\mathfrak{X}}(m)\}\)} & {\(\mathfrak{X}(m)\)} & {\(\frac{\mathfrak{X}(m)}{23}\)} & {\(A_m\)} & {\(\varphi(m)\ /\ ^{\circ}\)} & {\(\varphi_m\ /\ ^{\circ}\)} \\ \midrule
-    1  & 16.128 & +8.872 & 16.128 & 1.402 & 1.373 & -146.6 & -137.6 \\
-    2  & 3.442  & -2.509 & 3.442  & 0.299 & 0.343 & 133.2  & 152.4  \\
-    3  & 1.826  & -0.363 & 1.826  & 0.159 & 0.119 & 168.5  & -161.1 \\
-    4  & 0.993  & -0.429 & 0.993  & 0.086 & 0.08  & 25.6   & 90     \\ \midrule
-    5  & 1.29   & +0.099 & 1.29   & 0.112 & 0.097 & -175.6 & -114.7 \\
-    6  & 0.483  & -0.183 & 0.483  & 0.042 & 0.063 & 22.3   & 122.5  \\
-    7  & 0.766  & -0.475 & 0.766  & 0.067 & 0.039 & 141.6  & -122   \\
-    8  & 0.624  & +0.365 & 0.624  & 0.054 & 0.04  & -35.7  & 90     \\ \midrule
-    9  & 0.641  & -0.466 & 0.641  & 0.056 & 0.045 & 133.3  & -106.3 \\
-    10 & 0.45   & +0.421 & 0.45   & 0.039 & 0.034 & -69.4  & 110.9  \\
-    11 & 0.598  & -0.597 & 0.598  & 0.052 & 0.025 & 92.3   & -109.3 \\ \bottomrule
-\end{tabular}
-\caption{Fourier series}\label{tab::fourier}
-\end{table}
-\subsection{Structure}
-\lipsum[35]
-\newpage
+\begin{enumerate}
+    \item \begin{enumerate}
+              \item $x$
+              \item $-4$
+              \item $\frac 3 2$
+              \item $\sqrt 5$
+          \end{enumerate}
+    \item \begin{enumerate}
+              \item $ab=ba$; associative property
+              \item $a + (b + c) = (a + b) + c$; commutative property
+              \item $a(b + c) = ab + ac$; Distributive property
+          \end{enumerate}
+    \item \begin{enumerate}
+              \item $A = \{x \mid x \in \mathbb{R} \mid 2 < x < 7 \}$
+              \item $(2,7)$
+          \end{enumerate}
+    \item
+          \begin{enumerate}
+              \item The symbol $x$ stands for the \dashuline{absolute value} of the number x.
+                    \newline If $x$ is not 0, then she sign of $|x|$ is always \dashuline{positive}
+          \end{enumerate}
+    \item The distance between $a$ and $b$ on the real line is $d(a,b) = \dashuline{|a-b|}$.
+          \newline So the distance between $-5$ and $2$ is \dashuline{7}.
+    \item \begin{enumerate}
+              \item yes
+              \item yes
+          \end{enumerate}
+    \item \begin{enumerate}
+              \item ...
+              \item ...
+          \end{enumerate}
 
-% Anhang
-\renewcommand{\thesubsection}{\Alph{subsection}}
-\pagenumbering{Roman}
-\setcounter{page}{\value{lastroman}}
-\section*{Appendix}
-\addcontentsline{toc}{section}{Appendix}
-
-%Abkürzungsverzeichnis
-\input{inc/shorts.inc}
-\newpage
-
-%Code
-\input{inc/code_template.inc}
-\newpage
-\listoffigures
-\listoftables
-
-
-%Bibliographie
-\addcontentsline{toc}{section}{References}
-\bibliographystyle{alpha}
-\bibliography{bib/sources}
-\include{inc/ensure.inc}
+\end{enumerate}
+\section*{1.4 }
 
 \end{document}
